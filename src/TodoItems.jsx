@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+
 export function TodoItem({completed,id,title,updateTodo,deleteTodo}){
     return(
         <li >
@@ -9,13 +9,3 @@ export function TodoItem({completed,id,title,updateTodo,deleteTodo}){
         </li>
     );
 }
-
-TodoItem.propTypes = {
-  completed: PropTypes.bool.isRequired,
-   id: PropTypes.number.isRequired,
-  title: PropTypes.string.isRequired,
-  todos: PropTypes.array.isRequired,
-  AddNewTodos: PropTypes.func.isRequired,
-  updateTodo: PropTypes.func.isRequired,
-  deleteTodo: PropTypes.func.isRequired
-};

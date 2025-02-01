@@ -1,5 +1,4 @@
 import { TodoItem } from "./TodoItems"
-import PropTypes from 'prop-types';
 
 export function TodoList({todos,updateTodo,deleteTodo}){
     // const [todos,AddTodos]=useState([]);
@@ -17,10 +16,3 @@ export function TodoList({todos,updateTodo,deleteTodo}){
          </ul>
     )
 }
-
-TodoList.propTypes = {
-  todos: PropTypes.array.isRequired,
-  AddNewTodos: PropTypes.func.isRequired,
-  updateTodo: PropTypes.func.isRequired,
-  deleteTodo: PropTypes.func.isRequired
-};
