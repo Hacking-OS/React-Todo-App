@@ -8,11 +8,11 @@ import './App.css'
 function App() {
   // const [count, setCount] = useState(0)
   //  const [todos,AddTodos]=useState([]);
-   const [todos,AddTodos]=useState(()=>{
+  const [todos, AddTodos] = useState(() => {
     let LocalValue = localStorage.getItem('ITEMS');
-    if(LocalValue===undefined||LocalValue===null||LocalValue==='') return
+    if (!LocalValue) return [];  // Return an empty array if no data is found
     return JSON.parse(LocalValue);
-   });
+  });
   useEffect(()=>{
      localStorage.setItem('ITEMS',JSON.stringify(todos));
   },[todos]);
